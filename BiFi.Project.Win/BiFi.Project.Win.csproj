@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D2B4C001-D4A4-466F-90C6-C7310BC69ED7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BiFi.Project.Win</RootNamespace>
+    <AssemblyName>BiFi.Project.Win</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AccountForms\AccountEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AccountForms\AccountEditForm.Designer.cs">
+      <DependentUpon>AccountEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AccountForms\AccountListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AccountForms\AccountListForm.Designer.cs">
+      <DependentUpon>AccountListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseForms\BaseEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseForms\BaseEditForm.Designer.cs">
+      <DependentUpon>BaseEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseForms\BaseListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseForms\BaseListForm.Designer.cs">
+      <DependentUpon>BaseListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariEditForm.Designer.cs">
+      <DependentUpon>CariEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariListForm.Designer.cs">
+      <DependentUpon>CariListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GeneralForms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralForms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CountryForms\CountryEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CountryForms\CountryEditForm.Designer.cs">
+      <DependentUpon>CountryEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CountryForms\CountryListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CountryForms\CountryListForm.Designer.cs">
+      <DependentUpon>CountryListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProvinceForms\ProvinceEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProvinceForms\ProvinceEditForm.Designer.cs">
+      <DependentUpon>ProvinceEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProvinceForms\ProvinceListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProvinceForms\ProvinceListForm.Designer.cs">
+      <DependentUpon>ProvinceListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UomForms\UomEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UomForms\UomEditForm.Designer.cs">
+      <DependentUpon>UomEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UomForms\UomListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UomForms\UomListForm.Designer.cs">
+      <DependentUpon>UomListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\FilterFunctions.cs" />
+    <Compile Include="Functions\GeneralFunctions.cs" />
+    <Compile Include="Functions\SelectFunctions.cs" />
+    <Compile Include="ShowForms\Interfaces\IBaseFormShow.cs" />
+    <Compile Include="ShowForms\ShowEditForms.cs" />
+    <Compile Include="ShowForms\ShowListForms.cs" />
+    <Compile Include="Interfaces\IStatusBarDescription.cs" />
+    <Compile Include="Interfaces\IStatusBarShortcutName.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\Controls\Grids\PositiveGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveCalculator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveCrediCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveDefaultText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveFilterControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveIdCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveLayoutControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveMailText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveMultiText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositivePhoneText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveSpinCalc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\PositiveText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Navigators\LongNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Navigators\LongNavigator.Designer.cs">
+      <DependentUpon>LongNavigator.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\AccountForms\AccountEditForm.resx">
+      <DependentUpon>AccountEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AccountForms\AccountListForm.resx">
+      <DependentUpon>AccountListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaseForms\BaseEditForm.resx">
+      <DependentUpon>BaseEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaseForms\BaseListForm.resx">
+      <DependentUpon>BaseListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariForms\CariEditForm.resx">
+      <DependentUpon>CariEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariForms\CariListForm.resx">
+      <DependentUpon>CariListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GeneralForms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CountryForms\CountryEditForm.resx">
+      <DependentUpon>CountryEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CountryForms\CountryListForm.resx">
+      <DependentUpon>CountryListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProvinceForms\ProvinceEditForm.resx">
+      <DependentUpon>ProvinceEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProvinceForms\ProvinceListForm.resx">
+      <DependentUpon>ProvinceListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UomForms\UomEditForm.resx">
+      <DependentUpon>UomEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UomForms\UomListForm.resx">
+      <DependentUpon>UomListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\Navigators\LongNavigator.resx">
+      <DependentUpon>LongNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-new-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-new-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-save-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-save-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-return-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-return-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-delete-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-delete-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-close-window-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-close-window-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-delete-2-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-delete-2-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-add-2-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-add-2-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-back-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-back-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-warning-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-warning-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-ok-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-ok-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-edit-2-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-edit-2-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-refresh-2-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-refresh-2-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-filter-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-filter-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-column-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-column-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-print-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-print-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-send-2-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-send-2-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-comment-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-hide-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BiFi.Project.Bll\BiFi.Project.Bll.csproj">
+      <Project>{E347FE4B-39D7-46C6-BA7C-A2558B7FDE75}</Project>
+      <Name>BiFi.Project.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BiFi.Project.Common\BiFi.Project.Common.csproj">
+      <Project>{F799B4D5-60B9-4966-A492-F0F390CD432C}</Project>
+      <Name>BiFi.Project.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BiFi.Project.Model\BiFi.Project.Model.csproj">
+      <Project>{B1FE8AD5-CF82-49AA-94A1-138EE9D903B2}</Project>
+      <Name>BiFi.Project.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
